@@ -1,0 +1,20 @@
+// FONTS
+
+//ajouter Poppins
+
+// COLORS
+
+$dark: #222;
+$light: white;
+$primary: #e74c3c;
+
+// KEYFRAMES
+
+@keyframes background-zoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
