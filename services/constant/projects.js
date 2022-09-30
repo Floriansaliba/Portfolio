@@ -50,7 +50,7 @@ const projects = [
   {
     id: 5,
     title: "Les petits plats",
-    image: "les_petits_plats.png",
+    image: "les_petits_plats.PNG",
     images: ["reservia.PNG"],
     description: "Développez un algorithme de recherche en JavaScript",
     link: "https://floriansaliba.github.io/FlorianSaliba_2_04062021/",
@@ -86,7 +86,7 @@ const projects = [
   {
     id: 8,
     title: "Kasa",
-    image: "kasa.png",
+    image: "kasa.PNG",
     images: ["reservia.PNG"],
     description: "Développer une application Web avec React et React Routeur",
     link: "https://floriansaliba.github.io/FlorianSaliba_2_04062021/",
@@ -123,7 +123,7 @@ const projects = [
   {
     id: 11,
     title: "HRnet",
-    image: "hrnet.PNG",
+    image: "hrnet.png",
     images: ["reservia.png"],
     description: "Faire passer une librairie jQuery vers React",
     link: "https://floriansaliba.github.io/FlorianSaliba_2_04062021/",
