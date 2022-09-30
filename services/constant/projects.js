@@ -123,7 +123,7 @@ const projects = [
   {
     id: 11,
     title: "HRnet",
-    image: "hrnet.png",
+    image: "hrnet.PNG",
     images: ["reservia.png"],
     description: "Faire passer une librairie jQuery vers React",
     link: "https://floriansaliba.github.io/FlorianSaliba_2_04062021/",
