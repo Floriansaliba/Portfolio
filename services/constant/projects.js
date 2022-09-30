@@ -14,7 +14,7 @@ const projects = [
   {
     id: 2,
     title: "Ohmyfood",
-    image: "ohmyfood.PNG",
+    image: "ohmyfood.png",
     images: ["reservia.png"],
     description: "Dynamiser une page web avec des animations CSS",
     link: "https://floriansaliba.github.io/FlorianSaliba_2_04062021/",
@@ -26,7 +26,7 @@ const projects = [
   {
     id: 3,
     title: "GameOn",
-    image: "gameon.PNG",
+    image: "gameon.png",
     images: ["reservia.png"],
     description: "Créer une landing page avec Javascript",
     link: "https://floriansaliba.github.io/FlorianSaliba_2_04062021/",
@@ -38,7 +38,7 @@ const projects = [
   {
     id: 4,
     title: "Fisheye",
-    image: "FishEye.PNG",
+    image: "FishEye.png",
     images: ["reservia.png"],
     description: "Créer un site accessible pour une plateforme de photographes",
     link: "https://floriansaliba.github.io/FlorianSaliba_2_04062021/",
@@ -62,7 +62,7 @@ const projects = [
   {
     id: 6,
     title: "Billed",
-    image: "billed.PNG",
+    image: "billed.png",
     images: ["reservia.png"],
     description: "Débugger et tester un SaaS RH",
     link: "https://floriansaliba.github.io/FlorianSaliba_2_04062021/",
@@ -98,7 +98,7 @@ const projects = [
   {
     id: 9,
     title: "SportSee",
-    image: "sportsee.PNG",
+    image: "sportsee.png",
     images: ["reservia.png"],
     description: "Développer un tableau de bord d'analytics avec React",
     link: "https://floriansaliba.github.io/FlorianSaliba_2_04062021/",
