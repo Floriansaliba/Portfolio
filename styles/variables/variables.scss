@@ -18,3 +18,39 @@ $primary: #e74c3c;
     transform: scale(1.5);
   }
 }
+
+@keyframes scroll-button {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(25px);
+  }
+}
+
+@keyframes skill-growth {
+  0% {
+    flex-grow: 0;
+  }
+  100% {
+    flex-grow: 5;
+  }
+}
+
+@keyframes modal-opening {
+  0% {
+    transform: translateX(730px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

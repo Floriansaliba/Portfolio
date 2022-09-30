@@ -4,6 +4,10 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 // Barre de contacts
 
 .contact-bar {
@@ -96,9 +100,19 @@ body {
     &__li {
       height: 100%;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
+      &::after {
+        content: "";
+        width: 0px;
+        height: 5px;
+        background-color: $primary;
+        transition: all 0.6s ease;
+      }
+      &:hover::after {
+        width: 100%;
+      }
       & > a {
         color: $light;
         text-decoration: none;
@@ -112,13 +126,6 @@ body {
       }
     }
   }
-}
-
-.active {
-  border-bottom: solid;
-  border-color: $primary;
-  border-width: 4px;
-  color: $primary;
 }
 
 .background {
@@ -160,6 +167,7 @@ body {
 // Boutton Scroll
 
 .scroll-down {
+  cursor: pointer;
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -174,8 +182,10 @@ body {
   border-color: white;
   border-radius: 25px 25px 25px 25px;
   border-width: 1px;
+
   & > svg {
     width: 25px;
+    animation: scroll-button 1s ease-in-out infinite;
   }
   & > svg > path {
     fill: white;
@@ -245,7 +255,7 @@ body {
 }
 
 .skill-list {
-  height: 400px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -261,25 +271,30 @@ body {
 }
 
 .development-bar {
+  border-radius: 30px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
   width: 75%;
   height: 30px;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
   align-items: center;
   background-color: #e74c3c;
   margin-bottom: 20px;
+  &:hover > span {
+    animation: skill-growth 1s ease-in-out forwards;
+  }
 }
 
 .development-bar > span {
+  border-radius: 30px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  padding: 0 10px 0 10px;
+  padding: 0 10px;
   background-color: #f47a6d;
   height: 100%;
   color: white;
@@ -305,6 +320,7 @@ body {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .project {
@@ -313,6 +329,7 @@ body {
   justify-content: flex-start;
   align-items: flex-start;
   height: 400px;
+  width: 350px;
   border: solid;
   border-width: 0.5px;
   margin-top: 50px;
@@ -321,10 +338,15 @@ body {
     position: relative;
     width: 350px;
     height: 300px;
+    overflow: hidden;
     &__image {
       width: 350px;
       height: 100%;
       object-fit: cover;
+      &:hover {
+        transform: scale(1.5);
+        transition: all 1s;
+      }
     }
     &__hover-frame {
       position: absolute;
@@ -335,6 +357,10 @@ body {
       flex-direction: row;
       justify-content: center;
       align-items: center;
+      display: none;
+      &:hover {
+        cursor: pointer;
+      }
       & > svg {
         width: 75px;
       }
@@ -361,6 +387,315 @@ body {
       font-size: 14px;
       text-transform: uppercase;
       margin-left: 18px;
+    }
+  }
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.modal-closed {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 700px;
+  z-index: 1000;
+  background-color: white;
+  border-left: solid 2px;
+}
+
+.modal-opened {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 730px;
+  z-index: 1000;
+  background-color: white;
+  border-left: solid 2px;
+  animation: modal-opening 0.6s ease forwards;
+}
+
+#modal {
+  position: fixed;
+  &__frame {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    overflow-y: scroll;
+  }
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: $primary;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+  }
+  &__title {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: $primary;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 50px;
+  }
+  &__description {
+    margin: 50px 0px;
+  }
+  &__images {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  &__tags {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
+}
+
+.modal-image {
+  width: 100%;
+  border: solid 1px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.modal-tags {
+  background-color: $primary;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: white;
+  margin-right: 5px;
+  font-size: 13px;
+}
+
+#top {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 10px;
+  right: 0px;
+  height: 50px;
+  right: 50px;
+  border-radius: 50%;
+  border-width: 2px;
+  border: solid 1px white;
+  &__svg {
+    width: 50px;
+    height: 50px;
+    & > path {
+      fill: $primary;
+    }
+  }
+}
+
+// SECTION A PROPOS
+
+.about_intro {
+  width: 90%;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  line-height: 30px;
+}
+
+// MENUS DROPDOWN
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: solid 1px;
+  width: 90%;
+  margin-bottom: 20px;
+  &__head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e74c3c;
+  }
+  &__head__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 50px;
+    padding: 10px;
+  }
+  &__head__arrow {
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+    & > svg > path {
+      fill: white;
+    }
+  }
+  &__content {
+    display: "none";
+    padding: 10px;
+    &__p {
+      line-height: 1.3em;
+    }
+  }
+}
+
+.dropdown {
+  display: flex;
+}
+
+.up {
+  display: none;
+}
+
+// FORMULAIRE DE CONTACT
+
+.form-container {
+  width: 40%;
+}
+
+.layout {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 370px;
+}
+
+.input {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 15px;
+  padding-left: 5px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#message {
+  display: block;
+  min-height: 200px;
+}
+
+.button {
+  width: 100px;
+  height: 50px;
+  text-transform: uppercase;
+  background-color: white;
+  border-color: $primary;
+  color: $primary;
+  transition: all 0.6s ease;
+  &:hover {
+    border-color: white;
+    background-color: $primary;
+    color: white;
+  }
+}
+
+//MAP
+
+#map {
+  height: 300px;
+  width: 300px;
+}
+
+// LIENS DE CONTACT
+
+.contact-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 50px;
+  border-top: solid 1px;
+  border-color: $primary;
+  padding: 20px;
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    &__li {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      margin-right: 50px;
+      &:hover > div {
+        animation: rotate 0.6s ease-in-out;
+      }
+      &__svg-container {
+        width: 30px;
+        height: 30px;
+        padding: 10px;
+        &__svg > path {
+          fill: $primary;
+        }
+      }
+      &__a {
+        cursor: pointer;
+        text-decoration: none;
+        color: $dark;
+        border: solid 1px $primary;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 13px;
+        font-weight: 500;
+        text-transform: uppercase;
+        &:hover {
+          background-color: $primary;
+          color: white;
+          border-color: white;
+          transition: all 0.7s ease;
+        }
+      }
     }
   }
 }
