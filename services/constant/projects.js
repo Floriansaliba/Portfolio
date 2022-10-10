@@ -5,9 +5,9 @@ const projects = [
     image: "reservia.png",
     images: [
       "reservia.png",
-      "reservia_2.png",
-      "reservia_3.png",
-      "reservia_4.png",
+      "reservia_2.PNG",
+      "reservia_3.PNG",
+      "reservia_4.PNG",
     ],
     description: "Transformer une maquette en site web avec HTML & CSS",
     link: "https://floriansaliba.github.io/FlorianSaliba_2_04062021/",
