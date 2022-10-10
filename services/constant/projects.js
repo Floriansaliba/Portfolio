@@ -36,7 +36,7 @@ const projects = [
     link: "https://floriansaliba.github.io/GameOn-website-FR/#",
     github: "https://github.com/Floriansaliba/GameOn-website-FR/tree/main",
     technologies: ["JAVASCRIPT", "HTML", "CSS"],
-    about: `GameOn est le projet 4 de mon parcours OpenClassrooms. Ce dernier représente une landing page d'un site d'évenementiel dédié aux tournois de jeux vidéo. Le but de l'exercice était d'utiliser Javascript afin d'animer l'aparition d'une modal, et valider le formulaire côté front. Un message de confirmation s'affiche afin de notifier l'utilisateur que son inscription a bien été prise en compte.`,
+    about: `GameOn est le projet 4 de mon parcours OpenClassrooms. Ce dernier représente une landing page d'un site d'évenementiel dédié aux tournois de jeux vidéo. Le but de l'exercice était d'utiliser Javascript afin d'animer l'apparition d'une modal, et valider le formulaire côté front. Un message de confirmation s'affiche afin de notifier l'utilisateur que son inscription a bien été prise en compte.`,
   },
   {
     id: 4,
@@ -47,7 +47,7 @@ const projects = [
     link: "",
     github: "https://github.com/Floriansaliba/FishEye",
     technologies: ["HTML", "CSS", "JAVASCRIPT"],
-    about: `FishEye est une plateforme de photographes. Ces derniers pourrons afficher leur profil ainsi que leurs photos / vidéos. 
+    about: `FishEye est une plateforme de photographes. Ces derniers pourront afficher leur profil ainsi que leurs photos / vidéos. 
       Les profils ont été récupérés au format JSON, et disposés selon la maquette Figma. Les pages respectent les contraintes d'accessibilité (WAI). L'utilisateur pourra faire défiler les images d'un photographe grâce à un slider. `,
   },
   {
@@ -86,7 +86,7 @@ const projects = [
     link: "https://www.figma.com/file/lFAqwEBTZPc8lflTccCZa0/Maquette-Learn%40Home?node-id=0%3A1",
     github: "",
     technologies: ["FIGMA"],
-    about: `Learn@Home est le projet 10 de mon parcours Openclassrooms. Ce projet consiste à proposer une maquette de site permettant à des étudiants et des tuteurs de converser, s'ajouter des tâches et gérer leurs calendrier afin de positionner des séances de mentorat. Il m'a fallu mettre en place les user stories et créer une maquette via l'outil Figma. `,
+    about: `Learn@Home est le projet 10 de mon parcours Openclassrooms. Ce projet consiste à proposer une maquette de site permettant à des étudiants et des tuteurs de converser, d'ajouter des tâches et gérer leur calendrier afin de positionner des séances de mentorat. Il m'a fallu mettre en place les user stories et créer une maquette via l'outil Figma. `,
   },
   {
     id: 8,
