@@ -42,7 +42,7 @@ const projects = [
     id: 4,
     title: "Fisheye",
     image: "FishEye.PNG",
-    images: ["fishEye_2.PNG", "fishEye_3.PNG", "fishEye_4.PNG"],
+    images: ["FishEye_2.PNG", "FishEye_3.PNG", "FishEye_4.PNG"],
     description: "Créer un site accessible pour une plateforme de photographes",
     link: "",
     github: "https://github.com/Floriansaliba/FishEye",
