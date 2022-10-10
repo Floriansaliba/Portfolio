@@ -125,7 +125,7 @@ const projects = [
   {
     id: 11,
     title: "HRnet",
-    image: "hrnet.png",
+    image: "hrnet.PNG",
     images: ["hrnet_2.png", "hrnet_3.png"],
     description: "Faire passer une librairie jQuery vers React",
     link: "",
