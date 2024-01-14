@@ -1,112 +1,40 @@
-@-webkit-keyframes background-zoom {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  100% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-  }
-}
-
 @keyframes background-zoom {
   0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
   100% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    transform: scale(1.5);
   }
 }
-
-@-webkit-keyframes scroll-button {
-  0% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-  100% {
-    -webkit-transform: translateY(25px);
-            transform: translateY(25px);
-  }
-}
-
 @keyframes scroll-button {
   0% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    transform: translateY(0px);
   }
   100% {
-    -webkit-transform: translateY(25px);
-            transform: translateY(25px);
+    transform: translateY(25px);
   }
 }
-
-@-webkit-keyframes skill-growth {
-  0% {
-    -webkit-box-flex: 0;
-            flex-grow: 0;
-  }
-  100% {
-    -webkit-box-flex: 5;
-            flex-grow: 5;
-  }
-}
-
 @keyframes skill-growth {
   0% {
-    -webkit-box-flex: 0;
-        -ms-flex-positive: 0;
-            flex-grow: 0;
+    flex-grow: 0;
   }
   100% {
-    -webkit-box-flex: 5;
-        -ms-flex-positive: 5;
-            flex-grow: 5;
+    flex-grow: 5;
   }
 }
-
-@-webkit-keyframes modal-opening {
-  0% {
-    -webkit-transform: translateX(730px);
-            transform: translateX(730px);
-  }
-  100% {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-  }
-}
-
 @keyframes modal-opening {
   0% {
-    -webkit-transform: translateX(730px);
-            transform: translateX(730px);
+    transform: translateX(730px);
   }
   100% {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+    transform: translateX(0px);
   }
 }
-
-@-webkit-keyframes rotate {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
 @keyframes rotate {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
-}
-/*# sourceMappingURL=variables.css.map */
+}/*# sourceMappingURL=variables.css.map */
